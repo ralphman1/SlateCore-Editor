@@ -7,13 +7,14 @@ ShallowWrapper {
     value={
       Immutable.Record {
         "data": Immutable.Map {},
-        "decorations": Immutable.List [],
+        "decorations": null,
         "document": Immutable.Record {
           "data": Immutable.Map {},
           "key": "1",
           "nodes": Immutable.List [
             Immutable.Record {
               "data": Immutable.Map {},
+              "isVoid": false,
               "key": "2",
               "nodes": Immutable.List [
                 Immutable.Record {
@@ -129,6 +130,20 @@ ShallowWrapper {
               "normalize": [Function],
             },
             Object {
+              "match": Object {
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "match": Object {
+                      "object": "text",
+                    },
+                  },
+                ],
+                "object": "inline",
+              },
+              "text": /\\[\\\\w\\\\W\\]\\+/,
+            },
+            Object {
               "first": Array [
                 Object {
                   "object": "block",
@@ -221,6 +236,7 @@ ShallowWrapper {
               0,
             ],
           },
+          "isAtomic": false,
           "isFocused": false,
           "marks": null,
         },

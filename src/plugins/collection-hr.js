@@ -7,11 +7,11 @@ import AutoReplace from "slate-auto-replace"
 export const hr = [
   AutoReplace({
     trigger: "enter",
-    before: /^\*\*\*$/,
+    before: /^(\*\*\*)$/,
     change: change => {
       return change
         .setBlocks({type: "divider", isVoid: true})
-        .moveToStartOfNextBlock() // page break
+        .moveToEndOfNextBlock() // page break
     },
   }),
 ]

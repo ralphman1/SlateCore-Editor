@@ -104,93 +104,7 @@ ShallowWrapper {
           readOnly={false}
           renderMark={[Function]}
           renderNode={[Function]}
-          schema={
-            Object {
-              "blocks": Object {
-                "divider": Object {
-                  "isVoid": true,
-                },
-                "docket": Object {
-                  "isVoid": true,
-                },
-                "heading": Object {
-                  "match": Object {
-                    "object": "text",
-                  },
-                },
-                "image": Object {
-                  "data": Object {
-                    "src": [Function],
-                  },
-                  "isVoid": true,
-                  "normalize": [Function],
-                  "parent": Array [
-                    Object {
-                      "object": "document",
-                    },
-                  ],
-                },
-                "link": Object {
-                  "match": Object {
-                    "object": "text",
-                  },
-                },
-                "paragraph": Object {
-                  "match": Array [
-                    Object {
-                      "object": "text",
-                    },
-                    Object {
-                      "object": "link",
-                    },
-                  ],
-                },
-                "quote": Object {
-                  "match": Object {
-                    "object": "text",
-                  },
-                },
-              },
-              "document": Object {
-                "last": Array [
-                  Object {
-                    "type": "quote",
-                  },
-                  Object {
-                    "type": "paragraph",
-                  },
-                ],
-                "nodes": Array [
-                  Object {
-                    "match": Array [
-                      Object {
-                        "type": "paragraph",
-                      },
-                      Object {
-                        "type": "heading",
-                      },
-                      Object {
-                        "type": "divider",
-                      },
-                      Object {
-                        "type": "quote",
-                      },
-                      Object {
-                        "type": "image",
-                      },
-                      Object {
-                        "type": "docket",
-                      },
-                      Object {
-                        "type": "link",
-                      },
-                    ],
-                  },
-                ],
-                "normalize": [Function],
-              },
-            }
-          }
+          schema={Object {}}
           spellCheck={true}
           style={
             Object {
@@ -202,13 +116,14 @@ ShallowWrapper {
           value={
             Immutable.Record {
               "data": Immutable.Map {},
-              "decorations": Immutable.List [],
+              "decorations": null,
               "document": Immutable.Record {
                 "data": Immutable.Map {},
                 "key": "1",
                 "nodes": Immutable.List [
                   Immutable.Record {
                     "data": Immutable.Map {},
+                    "isVoid": false,
                     "key": "2",
                     "nodes": Immutable.List [
                       Immutable.Record {
@@ -324,6 +239,20 @@ ShallowWrapper {
                     "normalize": [Function],
                   },
                   Object {
+                    "match": Object {
+                      "isVoid": false,
+                      "nodes": Array [
+                        Object {
+                          "match": Object {
+                            "object": "text",
+                          },
+                        },
+                      ],
+                      "object": "inline",
+                    },
+                    "text": /\\[\\\\w\\\\W\\]\\+/,
+                  },
+                  Object {
                     "first": Array [
                       Object {
                         "object": "block",
@@ -400,22 +329,20 @@ ShallowWrapper {
                 ],
               },
               "selection": Immutable.Record {
-                "anchor": Immutable.Record {
-                  "key": "3",
-                  "offset": 0,
-                  "path": Immutable.List [
-                    0,
-                    0,
-                  ],
-                },
-                "focus": Immutable.Record {
-                  "key": "3",
-                  "offset": 0,
-                  "path": Immutable.List [
-                    0,
-                    0,
-                  ],
-                },
+                "anchorKey": "3",
+                "anchorOffset": 0,
+                "anchorPath": Immutable.List [
+                  0,
+                  0,
+                ],
+                "focusKey": "3",
+                "focusOffset": 0,
+                "focusPath": Immutable.List [
+                  0,
+                  0,
+                ],
+                "isAtomic": false,
+                "isBackward": false,
                 "isFocused": false,
                 "marks": null,
               },
@@ -541,91 +468,7 @@ ShallowWrapper {
           "readOnly": false,
           "renderMark": [Function],
           "renderNode": [Function],
-          "schema": Object {
-            "blocks": Object {
-              "divider": Object {
-                "isVoid": true,
-              },
-              "docket": Object {
-                "isVoid": true,
-              },
-              "heading": Object {
-                "match": Object {
-                  "object": "text",
-                },
-              },
-              "image": Object {
-                "data": Object {
-                  "src": [Function],
-                },
-                "isVoid": true,
-                "normalize": [Function],
-                "parent": Array [
-                  Object {
-                    "object": "document",
-                  },
-                ],
-              },
-              "link": Object {
-                "match": Object {
-                  "object": "text",
-                },
-              },
-              "paragraph": Object {
-                "match": Array [
-                  Object {
-                    "object": "text",
-                  },
-                  Object {
-                    "object": "link",
-                  },
-                ],
-              },
-              "quote": Object {
-                "match": Object {
-                  "object": "text",
-                },
-              },
-            },
-            "document": Object {
-              "last": Array [
-                Object {
-                  "type": "quote",
-                },
-                Object {
-                  "type": "paragraph",
-                },
-              ],
-              "nodes": Array [
-                Object {
-                  "match": Array [
-                    Object {
-                      "type": "paragraph",
-                    },
-                    Object {
-                      "type": "heading",
-                    },
-                    Object {
-                      "type": "divider",
-                    },
-                    Object {
-                      "type": "quote",
-                    },
-                    Object {
-                      "type": "image",
-                    },
-                    Object {
-                      "type": "docket",
-                    },
-                    Object {
-                      "type": "link",
-                    },
-                  ],
-                },
-              ],
-              "normalize": [Function],
-            },
-          },
+          "schema": Object {},
           "spellCheck": true,
           "style": Object {
             "background": "",
@@ -634,13 +477,14 @@ ShallowWrapper {
           },
           "value": Immutable.Record {
             "data": Immutable.Map {},
-            "decorations": Immutable.List [],
+            "decorations": null,
             "document": Immutable.Record {
               "data": Immutable.Map {},
               "key": "1",
               "nodes": Immutable.List [
                 Immutable.Record {
                   "data": Immutable.Map {},
+                  "isVoid": false,
                   "key": "2",
                   "nodes": Immutable.List [
                     Immutable.Record {
@@ -756,6 +600,20 @@ ShallowWrapper {
                   "normalize": [Function],
                 },
                 Object {
+                  "match": Object {
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "match": Object {
+                          "object": "text",
+                        },
+                      },
+                    ],
+                    "object": "inline",
+                  },
+                  "text": /\\[\\\\w\\\\W\\]\\+/,
+                },
+                Object {
                   "first": Array [
                     Object {
                       "object": "block",
@@ -832,22 +690,20 @@ ShallowWrapper {
               ],
             },
             "selection": Immutable.Record {
-              "anchor": Immutable.Record {
-                "key": "3",
-                "offset": 0,
-                "path": Immutable.List [
-                  0,
-                  0,
-                ],
-              },
-              "focus": Immutable.Record {
-                "key": "3",
-                "offset": 0,
-                "path": Immutable.List [
-                  0,
-                  0,
-                ],
-              },
+              "anchorKey": "3",
+              "anchorOffset": 0,
+              "anchorPath": Immutable.List [
+                0,
+                0,
+              ],
+              "focusKey": "3",
+              "focusOffset": 0,
+              "focusPath": Immutable.List [
+                0,
+                0,
+              ],
+              "isAtomic": false,
+              "isBackward": false,
               "isFocused": false,
               "marks": null,
             },
@@ -969,93 +825,7 @@ ShallowWrapper {
             readOnly={false}
             renderMark={[Function]}
             renderNode={[Function]}
-            schema={
-              Object {
-                "blocks": Object {
-                  "divider": Object {
-                    "isVoid": true,
-                  },
-                  "docket": Object {
-                    "isVoid": true,
-                  },
-                  "heading": Object {
-                    "match": Object {
-                      "object": "text",
-                    },
-                  },
-                  "image": Object {
-                    "data": Object {
-                      "src": [Function],
-                    },
-                    "isVoid": true,
-                    "normalize": [Function],
-                    "parent": Array [
-                      Object {
-                        "object": "document",
-                      },
-                    ],
-                  },
-                  "link": Object {
-                    "match": Object {
-                      "object": "text",
-                    },
-                  },
-                  "paragraph": Object {
-                    "match": Array [
-                      Object {
-                        "object": "text",
-                      },
-                      Object {
-                        "object": "link",
-                      },
-                    ],
-                  },
-                  "quote": Object {
-                    "match": Object {
-                      "object": "text",
-                    },
-                  },
-                },
-                "document": Object {
-                  "last": Array [
-                    Object {
-                      "type": "quote",
-                    },
-                    Object {
-                      "type": "paragraph",
-                    },
-                  ],
-                  "nodes": Array [
-                    Object {
-                      "match": Array [
-                        Object {
-                          "type": "paragraph",
-                        },
-                        Object {
-                          "type": "heading",
-                        },
-                        Object {
-                          "type": "divider",
-                        },
-                        Object {
-                          "type": "quote",
-                        },
-                        Object {
-                          "type": "image",
-                        },
-                        Object {
-                          "type": "docket",
-                        },
-                        Object {
-                          "type": "link",
-                        },
-                      ],
-                    },
-                  ],
-                  "normalize": [Function],
-                },
-              }
-            }
+            schema={Object {}}
             spellCheck={true}
             style={
               Object {
@@ -1067,13 +837,14 @@ ShallowWrapper {
             value={
               Immutable.Record {
                 "data": Immutable.Map {},
-                "decorations": Immutable.List [],
+                "decorations": null,
                 "document": Immutable.Record {
                   "data": Immutable.Map {},
                   "key": "1",
                   "nodes": Immutable.List [
                     Immutable.Record {
                       "data": Immutable.Map {},
+                      "isVoid": false,
                       "key": "2",
                       "nodes": Immutable.List [
                         Immutable.Record {
@@ -1189,6 +960,20 @@ ShallowWrapper {
                       "normalize": [Function],
                     },
                     Object {
+                      "match": Object {
+                        "isVoid": false,
+                        "nodes": Array [
+                          Object {
+                            "match": Object {
+                              "object": "text",
+                            },
+                          },
+                        ],
+                        "object": "inline",
+                      },
+                      "text": /\\[\\\\w\\\\W\\]\\+/,
+                    },
+                    Object {
                       "first": Array [
                         Object {
                           "object": "block",
@@ -1265,22 +1050,20 @@ ShallowWrapper {
                   ],
                 },
                 "selection": Immutable.Record {
-                  "anchor": Immutable.Record {
-                    "key": "3",
-                    "offset": 0,
-                    "path": Immutable.List [
-                      0,
-                      0,
-                    ],
-                  },
-                  "focus": Immutable.Record {
-                    "key": "3",
-                    "offset": 0,
-                    "path": Immutable.List [
-                      0,
-                      0,
-                    ],
-                  },
+                  "anchorKey": "3",
+                  "anchorOffset": 0,
+                  "anchorPath": Immutable.List [
+                    0,
+                    0,
+                  ],
+                  "focusKey": "3",
+                  "focusOffset": 0,
+                  "focusPath": Immutable.List [
+                    0,
+                    0,
+                  ],
+                  "isAtomic": false,
+                  "isBackward": false,
                   "isFocused": false,
                   "marks": null,
                 },
@@ -1406,91 +1189,7 @@ ShallowWrapper {
             "readOnly": false,
             "renderMark": [Function],
             "renderNode": [Function],
-            "schema": Object {
-              "blocks": Object {
-                "divider": Object {
-                  "isVoid": true,
-                },
-                "docket": Object {
-                  "isVoid": true,
-                },
-                "heading": Object {
-                  "match": Object {
-                    "object": "text",
-                  },
-                },
-                "image": Object {
-                  "data": Object {
-                    "src": [Function],
-                  },
-                  "isVoid": true,
-                  "normalize": [Function],
-                  "parent": Array [
-                    Object {
-                      "object": "document",
-                    },
-                  ],
-                },
-                "link": Object {
-                  "match": Object {
-                    "object": "text",
-                  },
-                },
-                "paragraph": Object {
-                  "match": Array [
-                    Object {
-                      "object": "text",
-                    },
-                    Object {
-                      "object": "link",
-                    },
-                  ],
-                },
-                "quote": Object {
-                  "match": Object {
-                    "object": "text",
-                  },
-                },
-              },
-              "document": Object {
-                "last": Array [
-                  Object {
-                    "type": "quote",
-                  },
-                  Object {
-                    "type": "paragraph",
-                  },
-                ],
-                "nodes": Array [
-                  Object {
-                    "match": Array [
-                      Object {
-                        "type": "paragraph",
-                      },
-                      Object {
-                        "type": "heading",
-                      },
-                      Object {
-                        "type": "divider",
-                      },
-                      Object {
-                        "type": "quote",
-                      },
-                      Object {
-                        "type": "image",
-                      },
-                      Object {
-                        "type": "docket",
-                      },
-                      Object {
-                        "type": "link",
-                      },
-                    ],
-                  },
-                ],
-                "normalize": [Function],
-              },
-            },
+            "schema": Object {},
             "spellCheck": true,
             "style": Object {
               "background": "",
@@ -1499,13 +1198,14 @@ ShallowWrapper {
             },
             "value": Immutable.Record {
               "data": Immutable.Map {},
-              "decorations": Immutable.List [],
+              "decorations": null,
               "document": Immutable.Record {
                 "data": Immutable.Map {},
                 "key": "1",
                 "nodes": Immutable.List [
                   Immutable.Record {
                     "data": Immutable.Map {},
+                    "isVoid": false,
                     "key": "2",
                     "nodes": Immutable.List [
                       Immutable.Record {
@@ -1621,6 +1321,20 @@ ShallowWrapper {
                     "normalize": [Function],
                   },
                   Object {
+                    "match": Object {
+                      "isVoid": false,
+                      "nodes": Array [
+                        Object {
+                          "match": Object {
+                            "object": "text",
+                          },
+                        },
+                      ],
+                      "object": "inline",
+                    },
+                    "text": /\\[\\\\w\\\\W\\]\\+/,
+                  },
+                  Object {
                     "first": Array [
                       Object {
                         "object": "block",
@@ -1697,22 +1411,20 @@ ShallowWrapper {
                 ],
               },
               "selection": Immutable.Record {
-                "anchor": Immutable.Record {
-                  "key": "3",
-                  "offset": 0,
-                  "path": Immutable.List [
-                    0,
-                    0,
-                  ],
-                },
-                "focus": Immutable.Record {
-                  "key": "3",
-                  "offset": 0,
-                  "path": Immutable.List [
-                    0,
-                    0,
-                  ],
-                },
+                "anchorKey": "3",
+                "anchorOffset": 0,
+                "anchorPath": Immutable.List [
+                  0,
+                  0,
+                ],
+                "focusKey": "3",
+                "focusOffset": 0,
+                "focusPath": Immutable.List [
+                  0,
+                  0,
+                ],
+                "isAtomic": false,
+                "isBackward": false,
                 "isFocused": false,
                 "marks": null,
               },
@@ -1755,13 +1467,14 @@ ShallowWrapper {
         },
         "value": Immutable.Record {
           "data": Immutable.Map {},
-          "decorations": Immutable.List [],
+          "decorations": null,
           "document": Immutable.Record {
             "data": Immutable.Map {},
             "key": "1",
             "nodes": Immutable.List [
               Immutable.Record {
                 "data": Immutable.Map {},
+                "isVoid": false,
                 "key": "2",
                 "nodes": Immutable.List [
                   Immutable.Record {
@@ -1877,6 +1590,20 @@ ShallowWrapper {
                 "normalize": [Function],
               },
               Object {
+                "match": Object {
+                  "isVoid": false,
+                  "nodes": Array [
+                    Object {
+                      "match": Object {
+                        "object": "text",
+                      },
+                    },
+                  ],
+                  "object": "inline",
+                },
+                "text": /\\[\\\\w\\\\W\\]\\+/,
+              },
+              Object {
                 "first": Array [
                   Object {
                     "object": "block",
@@ -1953,22 +1680,20 @@ ShallowWrapper {
             ],
           },
           "selection": Immutable.Record {
-            "anchor": Immutable.Record {
-              "key": "3",
-              "offset": 0,
-              "path": Immutable.List [
-                0,
-                0,
-              ],
-            },
-            "focus": Immutable.Record {
-              "key": "3",
-              "offset": 0,
-              "path": Immutable.List [
-                0,
-                0,
-              ],
-            },
+            "anchorKey": "3",
+            "anchorOffset": 0,
+            "anchorPath": Immutable.List [
+              0,
+              0,
+            ],
+            "focusKey": "3",
+            "focusOffset": 0,
+            "focusPath": Immutable.List [
+              0,
+              0,
+            ],
+            "isAtomic": false,
+            "isBackward": false,
             "isFocused": false,
             "marks": null,
           },

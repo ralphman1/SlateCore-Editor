@@ -5,6 +5,7 @@
 import isUrl from "is-url"
 
 import {BLOCK_TAGS, MARK_TAGS} from "./defaults"
+import {squish} from "../utils/squish-to-plaintext"
 
 export const RULES_DESERIALIZE = [
   {
@@ -23,14 +24,14 @@ export const RULES_DESERIALIZE = [
           return {
             object: "block",
             type: "quote",
-            nodes: next(el.childNodes),
+            nodes: next(squish(el).childNodes),
           }
         }
         case "heading": {
           return {
             object: "block",
             type: "heading",
-            nodes: next(el.childNodes),
+            nodes: next(squish(el).childNodes),
           }
         }
         case "image": {
@@ -50,7 +51,7 @@ export const RULES_DESERIALIZE = [
             data: {
               href: el.getAttribute("href"),
             },
-            nodes: next(el.childNodes),
+            nodes: next(squish(el).childNodes),
           }
         }
         default:

@@ -12,16 +12,15 @@ import Unquote from "../components/controls/Unquote"
  */
 export const renderNode = props => {
   const {node, attributes, children, isSelected, editor} = props
-  const focus =
-    editor.value.selection && editor.value.selection.isFocused && isSelected
-  const className = focus ? "focus" : "nofocus"
+  const focus = editor.value.isFocused && isSelected
+  const focusClassName = focus ? "focus" : "nofocus"
   switch (node.type) {
     case "paragraph":
       return <p {...attributes}>{children}</p>
     case "heading":
       return <h3>{children}</h3>
     case "divider":
-      return <hr className={className} />
+      return <hr className={focusClassName} />
     case "quote":
       return (
         <div style={{clear: "both"}}>
@@ -48,7 +47,7 @@ export const renderNode = props => {
                 Unquote
               </Unquote>
             )}
-          <blockquote {...attributes} className={className}>
+          <blockquote {...attributes} className={focusClassName}>
             {children}
           </blockquote>
         </div>

@@ -26,7 +26,7 @@ export const rulesSerializeWithProps = props => [
               : props.components.Picture
             return addKey(
               <Picture
-                editor={{value: {isSelected: false}}}
+                editor={{value: {isFocused: false, isSelected: false}}}
                 node={{
                   data: {
                     get: object => node.data[object],

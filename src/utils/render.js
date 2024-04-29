@@ -2,12 +2,7 @@ import React from "react"
 
 import Unquote from "../components/controls/Unquote"
 
-/**
- * Defines how all block-level nodes within the document are going to be rendered.
- * @function renderNode
- * @param props
- * @return {Object}
- */
+
 export const renderNode = props => {
   const {node, attributes, children, isSelected, editor} = props
   const focus = editor.value.isFocused && isSelected
@@ -58,7 +53,7 @@ export const renderNode = props => {
         const Picture = components.Picture
         return <Picture {...props} />
       } else {
-        // eslint-disable-next-line
+
         console.warn("<Picture /> component required to render images")
         return null
       }
@@ -92,11 +87,7 @@ export const renderNode = props => {
   }
 }
 
-/**
- * Marks are inline "rules" for text that apply bold and italic formatting.
- * @function renderMark
- * @return {Object}
- */
+
 export const renderMark = props => {
   const {children, mark} = props
   switch (mark.type) {

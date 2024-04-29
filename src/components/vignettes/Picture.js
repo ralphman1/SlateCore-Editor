@@ -15,14 +15,7 @@ export const Figure = styled.figure`
   }
 `
 
-/**
- * This component will render an image if it's an URL or request `data-uri` from browser's database using `localForage`.
- * @module Picture
- * @prop {Object} node Slate Editor node object.
- * @prop {Object} attributes Attributes for the Slate Editor node.
- * @prop {Boolean} isSelected Specifies whether the image is in user's focus.
- * @prop {Object} editor Slate Editor state.
- */
+
 export default class extends React.PureComponent {
   constructor(props) {
     super(props)
@@ -42,13 +35,7 @@ export default class extends React.PureComponent {
     this.state.src.includes("blob:") && URL.revokeObjectURL(this.state.src)
   }
 
-  /**
-   * Load image from URL or browser database via localForage
-   * @function loadImage
-   * @parameter {Object} file image file
-   * @parameter {String} key key to image file in browser DB
-   * @parameter {String} src
-   */
+  
   loadImage = (file, key, src) => {
     if (!key) {
       this.setState({src})

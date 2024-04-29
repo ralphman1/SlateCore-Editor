@@ -1,5 +1,5 @@
-// This entiere file is based on the code written by https://github.com/wmertens
-// https://gist.github.com/wmertens/0b4fd66ca7055fd290ecc4b9d95271a9
+
+
 
 import React from "react"
 
@@ -88,10 +88,9 @@ export const addKey = element => {
         }
       : null,
 
-    // This is a helper link that lets you define custom rendering options
-    // for blocks with particular parents. For example, an image can be
-    // rendered differently if its parent is a paragraph vs a quote.
-    // If `node` prop isn't added it will be ignored.
+
+
+
     parent: element.props.node
       ? {
           getNextBlock: () => {

@@ -1,13 +1,6 @@
-/**
- * A collection of functions that call appropriate functions in response to user interactions.
- * @module focusEvents
- */
+
 export const focusEvents = function() {
-  /**
-   * Highlights potential drop target when the draggable element enters it.
-   * @function addEventListener
-   * @return {Event}
-   */
+  
   document.addEventListener(
     "dragover",
     event => {
@@ -32,11 +25,7 @@ export const focusEvents = function() {
     false
   )
 
-  /**
-   * Blurs editor on Esc (remove highlights and guides for preview).
-   * @function addEventListener
-   * @return {Event}
-   */
+  
   document.addEventListener(
     "keydown",
     event => {

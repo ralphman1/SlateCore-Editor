@@ -20,10 +20,10 @@ export const rulesSerializeWithProps = props => [
           }
         }
         case "heading": {
-          // generate id based on header text or a random string
+
           const id =
             children[0] && children[0][0]
-              ? // TODO: this needs a test
+              ? 
                 (typeof children[0][0]?.props?.children === "string"
                   ? children[0][0]?.props?.children
                   : ""

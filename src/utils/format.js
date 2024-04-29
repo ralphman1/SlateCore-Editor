@@ -1,10 +1,4 @@
-/**
- * Transforms an inline block by making it a link.
- * @module addLink
- * @param {Object} value
- * @param {String} returnType
- * @return {Object} Value
- */
+
 export const addLink = (value, returnType = "value") => {
   const href = window.prompt("Enter the URL for the link:")
   if (returnType === "value") {
@@ -16,11 +10,7 @@ export const addLink = (value, returnType = "value") => {
   } else if (returnType === "data") return {href}
 }
 
-/**
- * Format commands switch for inline transformations.
- * @module formatCommand
- * @param {String} type
- */
+
 export const formatCommand = function(type) {
   const {value} = this.state
   let resolvedState
@@ -85,10 +75,7 @@ export const formatCommand = function(type) {
   }
 }
 
-/**
- *  Figures out where the format menu should appear, according to user's selection location within editor.
- * @module menuPosition
- */
+
 export const menuPosition = function() {
   const {value} = this.state
   const menu = this.menu
@@ -111,9 +98,9 @@ export const menuPosition = function() {
     const topOffset = rect.top + window.scrollY - menu.offsetHeight + 3
     menu.style.top = `${topOffset}px`
     menu.style.left = `${leftOffset}px`
-    //
-    // devices with touch screens will have edit menu considerably above the
-    // selected text to give way to the native hover menu
+
+
+
     "ontouchstart" in document.documentElement
       ? menu.classList.add("touch")
       : menu.classList.remove("touch")

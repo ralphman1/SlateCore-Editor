@@ -22,15 +22,15 @@ module.exports = {
         use: [{loader: "style-loader"}, {loader: "css-loader"}],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, //to support @font-face rule
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
         use: {
           loader: "url-loader",
           options: {
             limit: 10000,
             name: "[name].[ext]",
             outputPath: "fonts/",
-            //the fonts will be emmited to public/assets/fonts/ folder
-            //the fonts will be put in the DOM <style> tag as eg. @font-face{ src:url(assets/fonts/font.ttf); }
+
+
           },
         },
       },

@@ -1,11 +1,6 @@
 import {getEventTransfer} from "slate-react-legacy"
 
-/**
- * MarkHotkey - A plugin that preserves allowed HTML structure when user pastes HTML content, and converts the rest into either plain text.
- *
- * @param  {Object} options
- * @return {Event}  Change Transformation for Slate.
- */
+
 export const Paste = options => {
   const {html} = options
   return {

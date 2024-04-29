@@ -1,16 +1,9 @@
-/**
- * A set of rules that defines how to transpile HTML itno slate document nodes and marks (and back).
- * @constant rules
- */
+
 import isUrl from "is-url"
 
 import {BLOCK_TAGS, MARK_TAGS} from "./defaults"
 
-/**
- * Flattens HTML into plain text.
- * @function squish
- * @return {String}
- */
+
 const squish = el => {
   el.innerHTML = el.innerText || el.textContent
   return el

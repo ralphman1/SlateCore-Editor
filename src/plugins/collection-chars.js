@@ -1,59 +1,50 @@
 import AutoReplace from "slate-auto-replace-legacy"
 
-/**
- * An array of plugins that makes quotes smart, turns dashes into long dashes and triple dots into an ellipsis.
- * @module chars
- */
+
 export const chars = [
-  /**
-   * Smart quotes.
-   * @function AutoReplace
-   */
+  
   AutoReplace({
     trigger: /(")/,
     before: /[^ ”]$/,
     transform: transform => {
-      return transform.insertText("”") // smart double quote (right)
+      return transform.insertText("”") 
     },
   }),
   AutoReplace({
     trigger: /(")/,
     before: /^|[ ]$/,
     transform: transform => {
-      return transform.insertText("“") // smart double quote (left)
+      return transform.insertText("“") 
     },
   }),
   AutoReplace({
     trigger: /(')/,
     before: /[^ ”]$/,
     transform: transform => {
-      return transform.insertText("’") // smart single quote (right)
+      return transform.insertText("’") 
     },
   }),
   AutoReplace({
     trigger: /(')/,
     before: /^|[ ]$/,
     transform: transform => {
-      return transform.insertText("‘") // smart single quote (left)
+      return transform.insertText("‘") 
     },
   }),
 
-  /**
-   * Long dash and ellipsis.
-   * @function AutoReplace
-   */
+  
   AutoReplace({
     trigger: "space",
     before: /( -)$/,
     transform: transform => {
-      return transform.insertText(" — ") // mdash
+      return transform.insertText(" — ") 
     },
   }),
   AutoReplace({
     trigger: "space",
     before: /(\.\.\.)$/,
     transform: transform => {
-      return transform.insertText("… ") // elipsis
+      return transform.insertText("… ") 
     },
   }),
 ]

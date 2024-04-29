@@ -54,10 +54,7 @@ const MenuItem = styled.button`
   flex-grow: 1;
 `
 
-/**
- * A component with all of the UI logic for the floating format menu.
- * @module FormatMenu
- */
+
 export default props => {
   if (props.value.blocks.some(node => node.type === "quote")) return null
   if (
@@ -91,7 +88,7 @@ export default props => {
     props.controls && props.controls.MakeItalic
       ? props.controls.MakeItalic
       : () => <i>i</i>
-  //
+
   return (
     <Menu ref={props.menuRef} className="fpe-menu">
       {props.value.blocks.some(node => node.type === "heading") ? (

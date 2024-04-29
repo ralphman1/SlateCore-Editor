@@ -4,12 +4,7 @@ import {v1 as uuidv1} from "uuid"
 
 import {PICTURE_ACCEPTED_UPLOAD_MIME} from "../constants/defaults"
 
-/**
- * Converts file to base64 string
- * @function fileToBase64
- * @param {File}
- * @return {String}
- */
+
 export const fileToBase64 = file => {
   return new Promise((resolve, reject) => {
     if (file instanceof Blob) {
@@ -30,13 +25,7 @@ export const fileToBase64 = file => {
   })
 }
 
-/**
- * Converts data-uri image to file/Blob
- * Source: https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata
- * @function base64ToBlob
- * @param {String}
- * @return {File}
- */
+
 export const base64ToBlob = string => {
   if (string instanceof Blob) return string
   let byteString
@@ -54,14 +43,7 @@ export const base64ToBlob = string => {
   return new Blob([ia], {type: mimeString})
 }
 
-/**
- * Enforces image size and filetype.
- * @function forceImageRestrictions
- * @param {Int} size Size in bytes.
- * @param {Array} type Image memes accepted.
- * @param {Int} max Cut-off image size in megabytes.
- * @return {Promise}
- */
+
 export const forceImageRestrictions = (size, type, max = 10) => {
   let correctFileType = false
   PICTURE_ACCEPTED_UPLOAD_MIME.forEach(acceptedFiletype => {
@@ -76,12 +58,7 @@ export const forceImageRestrictions = (size, type, max = 10) => {
   })
 }
 
-/**
- * Figures out the image button location and appearance, depending on user's carriage position within the editor and calls appropriate functions when the user clicks "Add Image" button.
- * @module imageButtonPosition
- * @param {Object} value Slate Editor Value.
- * @param {Object} parentOffsets Offset pixel values.
- */
+
 export const imageButtonPosition = function(value, parentOffsets) {
   const {focusBlock} = value
   const hideImageButton = () =>
@@ -113,36 +90,24 @@ export const imageButtonPosition = function(value, parentOffsets) {
   this.setState({cursorContext})
 }
 
-/**
- * Image button click action.
- * @module handleImageButton
- */
+
 export const handleImageButton = function(event) {
   if (!event) return
   event.preventDefault()
   event.stopPropagation()
-  /**
-   * Timeout allows to paint the image button downstate before bringing up file upload dialogue or a docket component.
-   * @function responseDelay
-   */
+  
   const responseDelay = setTimeout(() => {
     clearTimeout(responseDelay)
     if (!this.props.components.PictureDocket) {
-      /**
-       * If PictureDocket component isn't defined, brings up the dialogue to upload image file.
-       * @function click
-       */
+      
       this.fileInput.click()
       return
     }
-    //
-    // insert docket block into editor if the PictureDocket
-    // component is defiend
 
-    /**
-     * Inserts docket block into editor if the PictureDocket component is defiend.
-     * @function insertBlock
-     */
+
+
+
+    
     const activeBlockKey = this.state.value.focusBlock.key
     const resolvedState = this.state.value
       .change({save: false})
@@ -153,10 +118,7 @@ export const handleImageButton = function(event) {
       .value.change({save: false})
       .removeNodeByKey(activeBlockKey)
 
-    /**
-     * Hides "Insert Image" button when docket is shown.
-     * @function setState
-     */
+    
     this.setState(prevState => ({
       value: resolvedState.value,
       cursorContext: {...prevState.cursorContext, newLine: false},
@@ -164,11 +126,7 @@ export const handleImageButton = function(event) {
   }, 50)
 }
 
-/**
- * Handles insertion of image file into the document and storing it in the browser's database.
- * @module handleFileUpload
- * @param {Event} event
- */
+
 export const handleFileUpload = function(event) {
   const file = event.target.files[0]
   forceImageRestrictions(
@@ -190,17 +148,9 @@ export const handleFileUpload = function(event) {
       let resolvedState
       fileToBase64(file).then(string => localForage.setItem(key, string))
 
-      /**
-       * If PictureDocket component isn't defined, simply inserts the image into the document.
-       * @function insertBlock
-       * @param {Object} block
-       */
+      
       if (!docket) resolvedState = editorProps.value.change().insertBlock(block)
-      /**
-       * If PictureDocket component is defined, inserts the image into the document AND removes the docket from the doc.
-       * @function insertBlock
-       * @param {Object} block
-       */ else
+       else
         resolvedState = editorProps.value
           .change()
           .insertBlock(block)

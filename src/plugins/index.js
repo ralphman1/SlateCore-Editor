@@ -7,10 +7,7 @@ import {html} from "../utils/deserialize-html"
 import {images} from "./collection-images"
 import {quote} from "./collection-quote"
 
-/**
- * A concatenation of all plugins required to run `french-press-editor` into a single array.
- * @module plugins
- */
+
 export const plugins = [].concat.apply(
   [],
   [[Paste({html})], chars, header, hotkeys, hr, images, quote]

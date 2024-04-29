@@ -1,9 +1,6 @@
 import styled from "styled-components"
 
-/**
- * Default CSS styles that visually render the editor component (nicely) using Styled Components.
- * @module Wrapper
- */
+
 export const Wrapper = styled.div`
   background: #fff;
   max-width: 600px;
